@@ -4,6 +4,13 @@
     border: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+
+/* Header styles start */
+
 .header {
   position: absolute;
   width: 1440px;
@@ -11,6 +18,7 @@
   left: 0px;
   top: 0px;
   background: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
 .logo {
@@ -80,6 +88,10 @@
     font-weight: 500;
 }
 
+/* Header styles end */
+
+/* Preview styles start */
+
 .preview {
   width: 1440px;
   height: 765px;
@@ -131,12 +143,17 @@
   width: 75%;
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.0);
-  margin-left: 41px;
+  padding-left: 41px;
+  font-family: 'Aleo', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgb(242, 120, 92);
 }
 
 .search::placeholder {
   color: rgb(242, 120, 92);
-  font-family: 'Aleo';
+  font-family: 'Aleo', serif;
   font-style: italic;
   font-weight: 400;
   font-size: 24px;
@@ -157,6 +174,10 @@
   line-height: 32px;
   color: #FFFFFF;
 }
+
+/* Preview styles end */
+
+/* Steps styles start */
 
 .steps {
   width: 1440px;
@@ -208,13 +229,17 @@
   font-size: 20px;
   line-height: 24px;
   color: #0D606F;
-  margin-top: 30px;
 }
 
 .icon {
   width: 100px;
   height: 100px;
+  margin-bottom: 30px;
 }
+
+/* Steps styles end */
+
+/* Destinations styles start */
 
 .destinations {
     width: 1440px;
@@ -234,6 +259,11 @@
     width: 1440px;
     height: 800px;
     margin-top: 46px;
+    overflow: hidden;
+}
+
+.photo-element {
+  position: relative;
 }
 
 .photo {
@@ -243,11 +273,36 @@
     margin-right: 60px;
 }
 
+.photo-title {
+  font-family: 'Red Hat Text', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+  transform: translateY(100&);
+}
 
-.stories {
-    width: 1440px;
-    height: 1504px;
-    background: #FFFFFF;
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(242, 120, 92, 0.5);
+  margin-right: 10px;
+  margin-top: 24px;
+}
+
+.circle:nth-child(2) {
+  background: #F2785C;
 }
 
 .button {
@@ -267,4 +322,132 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+}
+
+/* Destinations styles end */
+
+/* Stories styles start */
+
+.stories {
+  width: 1440px;
+  height: 1504px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./assets/images/section_four.jpg) no-repeat;
+  background-position-y: 164px;
+  background-size: cover;
+  position: relative;
+}
+
+.stories-block {
+  width: 1440px;
+  height: 1270px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:  rgba(255, 255, 255, 0.7);
+}
+
+.story {
+  width: 1200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-left: 120px;
+}
+
+.story:nth-last-child(4) {
+  margin-bottom: 40px;
+}
+
+.story :nth-child(1) {
+  margin-top: 50px;
+}
+
+.story-image {
+  width: 400px;
+  height: 250px;
+  border-radius: 16px;
+  filter: drop-shadow(0px 4px 4px #0D606F);
+  margin-right: 40px;
+}
+
+.text {
+  width: 760px;
+  height: 184px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title-story {
+  font-family: 'Aleo', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  color: #0D606F;
+  margin-bottom: 24px;
+}
+
+.read-more-link {
+  font-family: 'Aleo', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0D606F;
+}
+
+/* Stories styles end */
+
+/* Footer styles start */
+
+.footer {
+  width: 1440px;
+  height: 55px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: -61px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact-line {
+  width: 845px;
+  height: 33px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  transform: translateY(3674px);
+}
+
+.footer-links {
+  width: 140px;
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 120px;
+  align-items: center;
+}
+
+.contacts {
+  width: 33px;
+  height: 33px;
+}
+
+.title-footer {
+  font-family: 'Red Hat Text', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
 }
